@@ -23,7 +23,7 @@ const [todos,setTodos]=useState([
 
 //update 
 const setUpdate = (name, id) => {
-    const newTask = prompt('Please enter your new task!')
+    const newTask = prompt('Please enter your new task!') //new input value
     setTodos(todos.map(todo => {
         if (todo.id === id) {
           todo.name = newTask
@@ -35,6 +35,7 @@ const setUpdate = (name, id) => {
       console.log(todos);
 
   }//end of update
+  
 //delete task from list 
 const deleteList= (id)=>{
     setTodos(todos.filter(todo=> todo.id !==id))
